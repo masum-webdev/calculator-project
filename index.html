@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="calculator">
-    <input type="text" placeholder="0" disabled>
+    <input id="expression" type="text" placeholder="0" disabled>
     <div class="calculator-buttons">
-      <button class="calc-button is-ac">AC</button>
-      <button class="calc-button">	&#8592;</button>
-      <button class="calc-button">&divide;</button>
-      <button class="calc-button">&times;</button>
+      <button onclick="calculate('ac')" class="calc-button is-ac">AC</button>
+      <button onclick="calculate('back')" class="calc-button"> &#8592;</button>
+      <button onclick="calculate('/')" class="calc-button">&divide;</button>
+      <button onclick="calculate('*')" class="calc-button">&times;</button>
 
-      <button class="calc-button">7</button>
-      <button class="calc-button">8</button>
-      <button class="calc-button">9</button>
-      <button class="calc-button">&minus;</button>
 
-      <button class="calc-button">4</button>
-      <button class="calc-button">5</button>
-      <button class="calc-button">6</button>
-      <button class="calc-button">&plus;</button>
+      <button onclick="calculate(7)" class="calc-button">7</button>
+      <button onclick="calculate(8)" class="calc-button">8</button>
+      <button onclick="calculate(9)" class="calc-button">9</button>
+      <button onclick="calculate('-')" class="calc-button">&minus;</button>
 
-      <button class="calc-button">1</button>
-      <button class="calc-button">2</button>
-      <button class="calc-button">3</button>
-      <button class="calc-button  is-equals">&equals;</button>
-      
-      
-      <button class="calc-button is-zero">0</button>
-      <button class="calc-button">.</button>
+      <button onclick="calculate(4)" class="calc-button">4</button>
+      <button onclick="calculate(5)" class="calc-button">5</button>
+      <button onclick="calculate(6)" class="calc-button">6</button>
+      <button onclick="calculate('+')" class="calc-button">&plus;</button>
+
+      <button onclick="calculate(1)" class="calc-button">1</button>
+      <button onclick="calculate(2)" class="calc-button">2</button>
+      <button onclick="calculate(3)" class="calc-button">3</button>
+      <button onclick="calculate('=')" class="calc-button  is-equals">&equals;</button>
+
+
+      <button onclick="calculate(0)" class="calc-button is-zero">0</button>
+      <button onclick="calculate('.')" class="calc-button">.</button>
     </div>
   </div>
-  
+
+  <script src="calculation.js"></script>
 </body>
+
 </html>
